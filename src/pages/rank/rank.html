@@ -1,0 +1,75 @@
+<!--
+  Generated template for the RankPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>Rank Oficial</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list-header>
+    	Jogador
+  	</ion-list-header>
+	<ion-list>
+		<ion-item-sliding #item>
+			<ion-item>
+				{{playerList[0].name}}
+				<button ion-button (click)="playerInfoClick({id:0})" item-end>
+					<ion-icon name="information"></ion-icon>
+				</button>
+			</ion-item>
+			<ion-item-options side="left">
+				<button ion-button (click)="rankUp(item)">
+					<ion-icon name="arrow-dropup"></ion-icon>
+				</button>
+				<button ion-button color="danger" (click)="rankDown(item)">
+					<ion-icon name="arrow-dropdown"></ion-icon>
+				</button>
+				<button ion-button (click)="starUp(item)">
+					<ion-icon name="star"></ion-icon>
+				</button>
+				<button ion-button color="danger" (click)="starDown(item)">
+					<ion-icon name="star"></ion-icon>
+				</button>
+			</ion-item-options>
+
+			<ion-item-options side="right">
+				
+			</ion-item-options>
+		</ion-item-sliding>
+
+		<ion-item-sliding #item2>
+			<ion-item>
+				{{playerList[1].name}}
+				<button ion-button (click)="playerInfoClick({id:1})" item-end>
+					<ion-icon name="information"></ion-icon>
+				</button>
+			</ion-item>
+			<ion-item-options side="left">
+				<button ion-button (click)="rankUp(item)">
+					<ion-icon name="arrow-dropup"></ion-icon>
+				</button>
+				<button ion-button color="danger" (click)="rankDown(item)">
+					<ion-icon name="arrow-dropdown"></ion-icon>
+				</button>
+				<button ion-button (click)="starUp(item)">
+					<ion-icon name="star"></ion-icon>
+				</button>
+				<button ion-button color="danger" (click)="starDown(item)">
+					<ion-icon name="star"></ion-icon>
+				</button>
+			</ion-item-options>
+
+			<ion-item-options side="right">
+				
+			</ion-item-options>
+		</ion-item-sliding>
+	</ion-list>
+</ion-content>
